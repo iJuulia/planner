@@ -1,0 +1,38 @@
+:root {
+  font-family: Inter, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: InterVariable, sans-serif;
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  min-width: 0;
+}
+
+.wrapper {
+  @apply h-screen flex items-center justify-center bg-no-repeat bg-center;
+  background-image: url(/bg.png);
+}
+
+strong {
+  @apply text-zinc-100 font-semibold;
+}
+
+.line-v {
+  @apply w-px h-6 bg-zinc-800 border-none;
+}
+
+.line-h {
+  @apply w-full h-px bg-zinc-800 border-none;
+}
+
+input {
+  color-scheme: dark;
+}
