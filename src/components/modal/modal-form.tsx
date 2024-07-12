@@ -1,4 +1,4 @@
-import React, { FormEvent, ReactNode } from 'react'
+import { FormEvent, ReactNode } from 'react'
 
 interface ModalFormProps {
   createEvent: (event: FormEvent<HTMLFormElement>) => void

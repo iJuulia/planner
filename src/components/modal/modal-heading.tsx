@@ -1,5 +1,5 @@
 import { X } from 'lucide-react'
-import React, { ReactNode } from 'react'
+import { ReactNode } from 'react'
 
 interface ModalHeadingProps {
   title: string
