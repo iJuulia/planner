@@ -5,9 +5,16 @@ import { Button } from '../../components/button'
 interface ConfirmModalProps {
   closeConfirm: () => void
   createTrip: (event: FormEvent<HTMLFormElement>) => void
+  setOwnerName: (name: string) => void
+  setOwnerEmail: (email: string) => void
 }
 
-export function ConfirmModal({ closeConfirm, createTrip }: ConfirmModalProps) {
+export function ConfirmModal({
+  closeConfirm,
+  createTrip,
+  setOwnerName,
+  setOwnerEmail,
+}: ConfirmModalProps) {
   return (
     <div className='bg-black/60 fixed inset-0 flex items-center justify-center'>
       <div className='w-fit max-w-prose rounded-xl py-5 px-6 bg-zinc-900 shadow-shape space-y-5'>
@@ -35,6 +42,7 @@ export function ConfirmModal({ closeConfirm, createTrip }: ConfirmModalProps) {
               className='bg-transparent text-lg placeholder-zinc-400 outline-none flex-1'
               name='nome'
               placeholder='Seu nome completo'
+              onChange={(event) => setOwnerName(event.target.value)}
             />
           </div>
 
@@ -45,6 +53,7 @@ export function ConfirmModal({ closeConfirm, createTrip }: ConfirmModalProps) {
               type='email'
               name='email'
               placeholder='Seu e-mail pessoal'
+              onChange={(event) => setOwnerEmail(event.target.value)}
             />
           </div>
 
